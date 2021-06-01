@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { listDishes } from "../utils/api";
-import DishCard from "./DishCard";
-import ErrorAlert from "../layout/ErrorAlert";
+import React, { useEffect, useState } from 'react';
+import { listDishes } from '../utils/api';
+import DishCard from './DishCard';
+import ErrorAlert from '../layout/ErrorAlert';
 
 function Home({ addToCart }) {
   const [dishes, setDishes] = useState([]);
@@ -27,7 +27,7 @@ function Home({ addToCart }) {
   return (
     <main>
       <ErrorAlert error={error} />
-      <div className="row">{cards}</div>
+      <div className="card-deck">{cards}</div>
     </main>
   );
 }

@@ -1,20 +1,21 @@
-import React, { useState } from "react";
-import Header from "./Header";
-import NotFound from "./NotFound";
-import Menu from "./Menu";
-import { Redirect, Route, Switch, useHistory } from "react-router-dom";
-import Home from "../home/Home";
-import OrderCreate from "../orders/OrderCreate";
-import OrderEdit from "../orders/OrderEdit";
-import DishEdit from "../dishes/DishEdit";
-import DishCreate from "../dishes/DishCreate";
-import Dashboard from "../dashboard/Dashbaord";
-import OrderConfirmed from "../orders/OrderComfired";
+import React, { useState } from 'react';
+import Header from './Header';
+import NotFound from './NotFound';
+import Menu from './Menu';
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import Home from '../home/Home';
+import OrderCreate from '../orders/OrderCreate';
+import OrderEdit from '../orders/OrderEdit';
+import DishEdit from '../dishes/DishEdit';
+import DishCreate from '../dishes/DishCreate';
+import Dashboard from '../dashboard/Dashbaord';
+import OrderConfirmed from '../orders/OrderComfired';
+import './Layout.css';
 
 const initialState = {
-  deliverTo: "",
-  mobilePhone: "",
-  status: "pending",
+  deliverTo: '',
+  mobilePhone: '',
+  status: 'pending',
   dishes: [],
 };
 
@@ -61,10 +62,10 @@ function Layout() {
       <div className="container">
         <Switch>
           <Route exact={true} path="/orders">
-            <Redirect to={"/dashboard"} />
+            <Redirect to={'/dashboard'} />
           </Route>
           <Route exact={true} path="/dishes">
-            <Redirect to={"/dashboard"} />
+            <Redirect to={'/dashboard'} />
           </Route>
           <Route path="/orders/new">
             <OrderCreate
